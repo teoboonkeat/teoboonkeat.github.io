@@ -1,8 +1,22 @@
 ---
 layout: post
-title: RecyclerView Adapter With Unit Test
+title: Write Unit Test For Your RecyclerView Adapter
 published: false
 ---
+
+When customizing a RecyclerView adapter, it is useful to create unit test so you yourself or any other future developers
+will not break existing functionalities while modifying your adapter.
+
+There are many literature on writing unit tests, and most will make reference to MVP (Model-View-Presenter) or clean 
+architecture designs. These are good. Writing testable code is always good. 
+
+But there are times when you need to take over a piece of legacy code, and it dates way back MVP became a buzzword-of-the-day. 
+One may be tempted to go through the uphill task of refactoring the legacy code to MVP first, then apply unit test. This approach is definitely good, but introduces a HUGE overhead if you just wants to dive into learning how to write unit tests. 
+
+It is still possible to write unit tests without MVP structure.
+
+Here, I will document what I did to write unit test for a change request in a RecyclerView adapter.
+
 
 To build a RecyclerView adapter. Insert special view contents within your adapter.
 
