@@ -1,9 +1,9 @@
 ---
 layout: post
-title: You're up and running!
+title: RecyclerView Adapter With Unit Test
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+To build a RecyclerView adapter. Insert special view contents within your adapter.
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
