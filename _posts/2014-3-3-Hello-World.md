@@ -1,6 +1,7 @@
 ---
 layout: post
 title: RecyclerView Adapter With Unit Test
+published: false
 ---
 
 To build a RecyclerView adapter. Insert special view contents within your adapter.
