@@ -57,6 +57,7 @@ public class MyAdapter extends RecyclerView.Adapter
   @Override
   protected void onCreate(...)
   {
+  	//test comments
   }
 }
 {% endhighlight %}
