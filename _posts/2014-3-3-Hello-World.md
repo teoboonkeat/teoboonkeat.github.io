@@ -52,6 +52,7 @@ MainActivity.java
 MyAdapter.java
 
 {% highlight java %}
+{% raw %}
   public class MyAdapter extends RecyclerView.Adapter
   {
     @Override
@@ -60,6 +61,7 @@ MyAdapter.java
       //test comments
     }
   }
+{% endraw %}
 {% endhighlight %}
 	
 
