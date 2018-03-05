@@ -51,7 +51,12 @@ MainActivity.java
 
 MyAdapter.java
 
-	{adapter code}
+  {% highlight ruby %}
+  def cat
+    puts 'I love cats'
+  end
+  {% endhighlight %}
+	
 
 So far, the code shows a straight forward simple recycler list. Build the app and we should see this.
 ![_config.yml]({{ site.baseurl }}/images/config.png)
