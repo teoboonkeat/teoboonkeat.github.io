@@ -58,7 +58,7 @@ MyAdapter.java
     @Override
     protected void onCreate(...)
     {
-      //test comments
+      //test comments endraw
     }
   }
 {% endraw %}
