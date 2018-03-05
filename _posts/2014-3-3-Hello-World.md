@@ -4,7 +4,7 @@ title: Write Unit Test For Your RecyclerView Adapter
 published: true
 ---
 
-When customizing a RecyclerView adapter, it is useful to create unit test so you yourself or any other future developers
+When customizing a RecyclerView adapter, it is useful to create a set of unit tests so you yourself or any other future developers
 will not break existing functionalities while modifying your adapter.
 
 There are many literature on writing unit tests, and most will make reference to MVP (Model-View-Presenter) or clean 
@@ -19,9 +19,11 @@ Here, I will document what I did to write unit test for a change request in a Re
 
 To keep things simple, we have a recycler view that have some title or text. The change request is to insert new content every three items in the recyler view - probably advertisement. To keep things simple we will not focus on the content of the item-to-insert. It will just be another text view. 
 
-Project Structure
------------------
+## Project Structure
+
 Project consists of just a MainActivity.java file to set up our recycler view with test data.
+
+MainActivity.java
 
     public class MainActivity extends AppCompatActivity
     {
@@ -38,17 +40,32 @@ Project consists of just a MainActivity.java file to set up our recycler view wi
             layoutManager = new LinearLayoutManager(this);
             rv.setLayoutManager(layoutManager);
 
-            // Forming up the test data
+            /// Forming up the test data
             List<String> data = Arrays.asList(getResources().getStringArray(R.array.TestDataSet));
             MyAdapter myAdapter = new MyAdapter(data);
 
-            // Populate recyclerView with adapter
+            /* Populate recyclerView with adapter */
             rv.setAdapter(myAdapter);
         }
     }
 
+MyAdapter.java
 
-To build a RecyclerView adapter. Insert special view contents within your adapter.
+	{adapter code}
+
+So far, the code shows a straight forward simple recycler list. Build the app and we should see this.
+![_config.yml]({{ site.baseurl }}/images/config.png)
+
+## The Change
+
+We now have a requirement to add an image view every 3 text list item. We have also decided that we do not want to modify the dataset of MyAdapter class. Maybe there will be other classes that depends on the unmodified (no image view) dataset. So what do we propose to do?
+
+## Strategy
+We will modify MyAdapter class only, to allow it to return an image view instead of a text view every three items. Now instead of going head-first into changing the code, we shall employ a Test-Driven-Development approach. That means to say that we will develop test cases for MyAdapter class first.
+
+
+
+
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
