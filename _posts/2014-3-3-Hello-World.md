@@ -23,11 +23,30 @@ Project Structure
 -----------------
 Project consists of just a MainActivity.java file to set up our recycler view with test data.
 
-{% highlight java %}
   public class MainActivity extends AppCompatActivity
   {
+    private RecyclerView rv;
+    private RecyclerView.LayoutManager layoutManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        rv = findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(this);
+        rv.setLayoutManager(layoutManager);
+
+        // Forming up the test data
+        List<String> data = Arrays.asList(getResources().getStringArray(R.array.TestDataSet));
+        MyAdapter myAdapter = new MyAdapter(data);
+
+        // Populate recyclerView with adapter
+        rv.setAdapter(myAdapter);
+    }
   }
-{% highlight java %}
+
 
 To build a RecyclerView adapter. Insert special view contents within your adapter.
 
