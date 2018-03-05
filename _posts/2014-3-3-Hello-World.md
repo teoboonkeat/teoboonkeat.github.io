@@ -51,17 +51,15 @@ MainActivity.java
 
 MyAdapter.java
 
-  {% highlight java %}
-  
-  public class MyAdapter extends RecyclerView.Adapter
+{% highlight java linenos %}
+public class MyAdapter extends RecyclerView.Adapter
+{
+  @Override
+  protected void onCreate(...)
   {
-  	@Override
-    protected void onCreate(...)
-    {
-    }
   }
-  
-  {% endhighlight %}
+}
+{% endhighlight %}
 	
 
 So far, the code shows a straight forward simple recycler list. Build the app and we should see this.
