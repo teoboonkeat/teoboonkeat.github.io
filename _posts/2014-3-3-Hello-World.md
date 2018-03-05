@@ -23,9 +23,10 @@ Project Structure
 -----------------
 Project consists of just a MainActivity.java file to set up our recycler view with test data.
 
+----
   public class MainActivity extends AppCompatActivity
   {
-
+----
 To build a RecyclerView adapter. Insert special view contents within your adapter.
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
