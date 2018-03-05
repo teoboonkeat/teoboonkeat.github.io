@@ -17,6 +17,9 @@ It is still possible to write unit tests without MVP structure.
 
 Here, I will document what I did to write unit test for a change request in a RecyclerView adapter.
 
+To keep things simple, we have a recycler view that have some title or text. The change request is to insert new content every three items in the recyler view - probably advertisement. To keep things simple we will not focus on the content of the item-to-insert. It will just be another text view. 
+
+
 
 To build a RecyclerView adapter. Insert special view contents within your adapter.
 
