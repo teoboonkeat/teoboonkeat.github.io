@@ -51,10 +51,16 @@ MainActivity.java
 
 MyAdapter.java
 
-  {% highlight ruby %}
-  def cat
-    puts 'I love cats'
-  end
+  {% highlight java %}
+  
+  public class MyAdapter extends RecyclerView.Adapter
+  {
+  	@Override
+    protected void onCreate(...)
+    {
+    }
+  }
+  
   {% endhighlight %}
 	
 
