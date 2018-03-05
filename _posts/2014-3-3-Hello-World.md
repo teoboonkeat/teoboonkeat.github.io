@@ -23,29 +23,29 @@ Project Structure
 -----------------
 Project consists of just a MainActivity.java file to set up our recycler view with test data.
 
-  public class MainActivity extends AppCompatActivity
-  {
-    private RecyclerView rv;
-    private RecyclerView.LayoutManager layoutManager;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
+    public class MainActivity extends AppCompatActivity
     {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        private RecyclerView rv;
+        private RecyclerView.LayoutManager layoutManager;
 
-        rv = findViewById(R.id.recyclerView);
-        layoutManager = new LinearLayoutManager(this);
-        rv.setLayoutManager(layoutManager);
+        @Override
+        protected void onCreate(Bundle savedInstanceState)
+        {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
-        // Forming up the test data
-        List<String> data = Arrays.asList(getResources().getStringArray(R.array.TestDataSet));
-        MyAdapter myAdapter = new MyAdapter(data);
+            rv = findViewById(R.id.recyclerView);
+            layoutManager = new LinearLayoutManager(this);
+            rv.setLayoutManager(layoutManager);
 
-        // Populate recyclerView with adapter
-        rv.setAdapter(myAdapter);
+            // Forming up the test data
+            List<String> data = Arrays.asList(getResources().getStringArray(R.array.TestDataSet));
+            MyAdapter myAdapter = new MyAdapter(data);
+
+            // Populate recyclerView with adapter
+            rv.setAdapter(myAdapter);
+        }
     }
-  }
 
 
 To build a RecyclerView adapter. Insert special view contents within your adapter.
