@@ -52,14 +52,14 @@ MainActivity.java
 MyAdapter.java
 
 {% highlight java linenos %}
-public class MyAdapter extends RecyclerView.Adapter
-{
-  @Override
-  protected void onCreate(...)
+  public class MyAdapter extends RecyclerView.Adapter
   {
-  	//test comments
+    @Override
+    protected void onCreate(...)
+    {
+      //test comments
+    }
   }
-}
 {% endhighlight %}
 	
 
