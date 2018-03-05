@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Write Unit Test For Your RecyclerView Adapter
-published: false
+published: true
 ---
 
 When customizing a RecyclerView adapter, it is useful to create unit test so you yourself or any other future developers
