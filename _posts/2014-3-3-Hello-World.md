@@ -19,7 +19,12 @@ Here, I will document what I did to write unit test for a change request in a Re
 
 To keep things simple, we have a recycler view that have some title or text. The change request is to insert new content every three items in the recyler view - probably advertisement. To keep things simple we will not focus on the content of the item-to-insert. It will just be another text view. 
 
+Project Structure
+-----------------
+Project consists of just a MainActivity.java file to set up our recycler view with test data.
 
+  public class MainActivity extends AppCompatActivity
+  {
 
 To build a RecyclerView adapter. Insert special view contents within your adapter.
 
