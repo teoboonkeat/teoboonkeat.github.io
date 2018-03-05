@@ -63,8 +63,19 @@ We now have a requirement to add an image view every 3 text list item. We have a
 ## Strategy
 We will modify MyAdapter class only, to allow it to return an image view instead of a text view every three items. Now instead of going head-first into changing the code, we shall employ a Test-Driven-Development approach. That means to say that we will develop test cases for MyAdapter class first.
 
+We will need to test the functions inside MyAdapter class. These are the changes that will be required:
 
+ - getItemCount()
+ 
+	The number of items returns will need to include the inserted image views. For a list of 5 items, we return 6.
+ 
+ - getItemViewType(int position)
+ 
+	View type returned at the 3rd, 7th, 11th and so forth will need to be of image view type instead of text view.
 
+ - onCreate(..., ....)
+ 
+ 	We need to create the correct type of holder, either a TextView of ImageView.
 
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
