@@ -51,7 +51,7 @@ MainActivity.java
 
 MyAdapter.java
 
-{% highlight java linenos %}
+{% highlight java %}
   public class MyAdapter extends RecyclerView.Adapter
   {
     @Override
