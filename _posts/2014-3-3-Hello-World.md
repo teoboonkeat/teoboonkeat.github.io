@@ -58,21 +58,62 @@ MyAdapter.java
 
 {% highlight java %}
 {% raw %}
-  public class MyAdapter extends RecyclerView.Adapter
-  {
-    @Override
-    protected void onCreate(...)
+public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
+{
+    List<String> data;
+
+    public MyAdapter(List<String> dataSet)
     {
-      //test comments endraw
+        this.data = dataSet;
     }
-  }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+    {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.normal_list_item, parent, false);
+
+        NormalContentViewHolder viewHolder = new NormalContentViewHolder(view);
+
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position)
+    {
+        ((NormalContentViewHolder)holder).textView.setText(data.get(position));
+    }
+
+    @Override
+    public int getItemCount()
+    {
+        return data.size();
+    }
+
+    @Override
+    public int getItemViewType(int position)
+    {
+        return super.getItemViewType(position);
+    }
+
+    public static class NormalContentViewHolder extends RecyclerView.ViewHolder
+    {
+        public TextView textView;
+
+        public NormalContentViewHolder(View itemView)
+        {
+            super(itemView);
+            textView = itemView.findViewById(R.id.textView);
+        }
+    }
+}
 {% endraw %}
 {% endhighlight %}
 	
 
 So far, the code shows a straight forward simple recycler list. Build the app and we should see this.
 
-![Screenshot_1520314417.png]({{site.baseurl}}/_posts/Screenshot_1520314417.png)
+![Screenshot_1520314417.png]({{site.baseurl}}/images/Screenshot_1520314417.png)
 
 
 ## The Change
@@ -94,15 +135,17 @@ We will need to test the functions inside MyAdapter class. These are the changes
 
  - onCreateViewHolder(ViewGroup parent, int viewType)
  
- 	We need to create the correct type of holder, either a TextView of ImageView.
+	We need to create the correct type of holder, either a TextView of ImageView.
 
  - onBindViewHolder(RecyclerView.ViewHolder holder, int position)
  
- 	Different binding methods for different view types.
+	Different binding methods for different view types.
     
-![Screenshot_1520314417.png]({{site.baseurl}}/_posts/Screenshot_1520314417.png)
+## Create Unit Test for MyAdapter
 
+In the navigation pane, locate the folder <project_name>(test). Unit tests are located in this folder. Right-click this and create a new class named MyAdapterTest.
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+![ScreenShot2018-03-06_151053.png]({{site.baseurl}}/images/ScreenShot2018-03-06_151053.png)
+
 
 The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
