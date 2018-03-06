@@ -290,7 +290,7 @@ public int getItemViewType(int position)
 
 Re-run the test again and you should see the test passing.
 
-### Using Mocks and Argument Captor
+### Using Mockito and Argument Captor
 
 Let's take a closer look at testing our onBindViewHolder function.
 
