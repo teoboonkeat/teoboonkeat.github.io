@@ -258,3 +258,5 @@ Run the test by clicking the icon located beside your test.
 ![ScreenShot_runTest.png]({{site.baseurl}}/images/ScreenShot_runTest.png)
 
 You should get an error. That is no surprise because the correct function has not been implemented.
+
+Now let's go back to MyAdapter
