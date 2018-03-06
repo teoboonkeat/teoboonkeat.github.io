@@ -217,3 +217,38 @@ public class MyAdapterTest
 }
 {% endraw %}
 {% endhighlight %}
+
+Create the test cases in test_getItemViewType() function.
+For positions 0 to 2, it should return MyAdapter.NORMAL_VIEW. 
+For position 3, it should return MyAdapter.INSERTED_VIEW.
+
+{% highlight java %}
+{% raw %}
+public class MyAdapterTest
+{
+	MyAdapter adapterUnderTest;
+    List<String> testData;
+  
+    @Before
+    public void setup()
+    {
+        testData = new ArrayList<>();
+        for (int i = 0; i < 20; i++)
+        {
+            testData.add("Item " + Integer.toString(i));
+        }
+        
+        adapterUnderTest = new MyAdapter(testData);
+    }
+
+    @Test
+    public void test_getItemViewType()
+    {
+        Assert.assertEquals(MyAdapter.NORMAL_VIEW, adapterUnderTest.getItemViewType(0));
+        Assert.assertEquals(MyAdapter.NORMAL_VIEW, adapterUnderTest.getItemViewType(1));
+        Assert.assertEquals(MyAdapter.NORMAL_VIEW, adapterUnderTest.getItemViewType(2));
+        Assert.assertEquals(MyAdapter.INSERTED_VIEW, adapterUnderTest.getItemViewType(3));
+    }
+}
+{% endraw %}
+{% endhighlight %}
