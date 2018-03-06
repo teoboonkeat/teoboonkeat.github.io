@@ -168,4 +168,22 @@ public class MyAdapterTest
 {% endraw %}
 {% endhighlight %}
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+When you run the test suite, the function setup() annotated with @Before will be called before every function annotated with @Test.
+
+Therefore we will perform setup functions in the setup() function.
+
+We want to test that getItemViewType returns a special inserted text view every 3 items. Let's create static constants in MyAdapter to identify these two views.
+
+MyAdapter.java
+
+{% highlight java %}
+{% raw %}
+public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
+{
+    public final static int NORMAL_VIEW = 1;
+    public final static int INSERTED_VIEW = 2;
+
+	....
+}
+{% endraw %}
+{% endhighlight %}
