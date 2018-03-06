@@ -218,6 +218,8 @@ public class MyAdapterTest
 {% endraw %}
 {% endhighlight %}
 
+### Using Assert to Validate Return Values
+
 Create the test cases in test_getItemViewType() function.
 For positions 0 to 2, it should return MyAdapter.NORMAL_VIEW. 
 For position 3, it should return MyAdapter.INSERTED_VIEW.
@@ -287,3 +289,13 @@ public int getItemViewType(int position)
 {% endhighlight %}
 
 Re-run the test again and you should see the test passing.
+
+###Using Mocks and Argument Captor
+
+Let's take a closer look at testing our onBindViewHolder function.
+
+{% highlight java %}
+{% raw %}
+
+{% endraw %}
+{% endhighlight %}
