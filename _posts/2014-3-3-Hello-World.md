@@ -261,7 +261,7 @@ You should get an error. That is no surprise because the correct function has no
 
 Now we return to our MyAdapter class to implement our getItemViewType such that the function will pass our test cases.
 
-{% highlight %}
+{% highlight java %}
 {% raw %}
 
 /* portion of code hidden */
