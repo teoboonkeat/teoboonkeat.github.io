@@ -311,12 +311,12 @@ If you are familiar with RecyclerViews, you would know that this function will b
 
 For the first thing, we can use something called an ArgumentCaptor to "catch" the holder variable that was passed in, then performing simple assertions on the value. To use this we will need to add the Mockito library.
 
-Add the following to your module's gradle file.
+Add the following to your module's gradle file, and re-sync gradle.
 
 {% highlight gradle %}
 {% raw %}
 
-testImplementation "org.mockito:mockito-core:2.8.9"
+testImplementation "org.mockito:mockito-core:2.13.0"
 
 {% endraw %}
 {% endhighlight %}
