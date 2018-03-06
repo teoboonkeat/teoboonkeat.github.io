@@ -94,15 +94,13 @@ We will need to test the functions inside MyAdapter class. These are the changes
 
  - onCreateViewHolder(ViewGroup parent, int viewType)
  
- 	We need to create the correct type of holder, either a TextView of ImageView.
+	We need to create the correct type of holder, either a TextView of ImageView.
 
  - onBindViewHolder(RecyclerView.ViewHolder holder, int position)
  
- 	Different binding methods for different view types.
+	Different binding methods for different view types.
     
 
 
-
-![_config.yml]({{ site.baseurl }}/images/config.png)
 
 The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
