@@ -290,12 +290,21 @@ public int getItemViewType(int position)
 
 Re-run the test again and you should see the test passing.
 
-###Using Mocks and Argument Captor
+### Using Mocks and Argument Captor
 
 Let's take a closer look at testing our onBindViewHolder function.
 
 {% highlight java %}
 {% raw %}
-
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position)
+    {
+        ((NormalContentViewHolder)holder).textView.setText(data.get(position));
+    }
 {% endraw %}
 {% endhighlight %}
+
+If you are familiar with RecyclerViews, you would know that this function will be called when the item specified by the position gets scrolled into view. The correct RecyclerView.ViewHolder holder and position will be passed into this function by RecyclerView class. In this function, we will be concerned with two things:
+
+1. The correct type of holder is being passed into this function.
+2. The function is setting the text or content of the view.
