@@ -147,5 +147,25 @@ In the navigation pane, locate the folder <project_name>(test). Unit tests are l
 
 ![ScreenShot2018-03-06_151053.png]({{site.baseurl}}/images/ScreenShot2018-03-06_151053.png)
 
+Create the following functions in MyAdapterTest class.
+
+{% highlight java %}
+{% raw %}
+public class MyAdapterTest
+{
+    @Before
+    public void setup()
+    {
+        
+    }
+
+    @Test
+    public void test_getItemViewType()
+    {
+        
+    }
+}
+{% endraw %}
+{% endhighlight %}
 
 The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
