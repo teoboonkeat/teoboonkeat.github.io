@@ -187,3 +187,33 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 }
 {% endraw %}
 {% endhighlight %}
+
+Create an instance of MyAdapter, populate with some test data.
+
+{% highlight java %}
+{% raw %}
+public class MyAdapterTest
+{
+	MyAdapter adapterUnderTest;
+    List<String> testData;
+  
+    @Before
+    public void setup()
+    {
+        testData = new ArrayList<>();
+        for (int i = 0; i < 20; i++)
+        {
+            testData.add("Item " + Integer.toString(i));
+        }
+        
+        adapterUnderTest = new MyAdapter(testData);
+    }
+
+    @Test
+    public void test_getItemViewType()
+    {
+        
+    }
+}
+{% endraw %}
+{% endhighlight %}
