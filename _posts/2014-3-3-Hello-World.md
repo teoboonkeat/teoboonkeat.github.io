@@ -259,4 +259,31 @@ Run the test by clicking the icon located beside your test.
 
 You should get an error. That is no surprise because the correct function has not been implemented.
 
-Now let's go back to MyAdapter
+Now we return to our MyAdapter class to implement our getItemViewType such that the function will pass our test cases.
+
+{% highlight %}
+{% raw %}
+
+/* portion of code hidden */
+
+private final static int NUM_ARTICLES_BETWEEN_INSERTS = 3;
+
+/* portion of code hidden */
+
+@Override
+public int getItemViewType(int position)
+{
+    if ((position + 1) % (NUM_ARTICLES_BETWEEN_INSERTS + 1) == 0)
+    {
+        return INSERTED_VIEW;
+    }
+    else
+    {
+        return NORMAL_VIEW;
+    }
+}
+
+{% endraw %}
+{% endhighlight %}
+
+Re-run the test again and you should see the test passing.
