@@ -42,11 +42,11 @@ MainActivity.java
             layoutManager = new LinearLayoutManager(this);
             rv.setLayoutManager(layoutManager);
 
-            /// Forming up the test data
+            // Forming up the test data
             List<String> data = Arrays.asList(getResources().getStringArray(R.array.TestDataSet));
             MyAdapter myAdapter = new MyAdapter(data);
 
-            /* Populate recyclerView with adapter */
+            // Populate recyclerView with adapter
             rv.setAdapter(myAdapter);
         }
     }
@@ -74,7 +74,6 @@ So far, the code shows a straight forward simple recycler list. Build the app an
 
 ![Screenshot_1520314417.png]({{site.baseurl}}/_posts/Screenshot_1520314417.png)
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
 
 ## The Change
 
