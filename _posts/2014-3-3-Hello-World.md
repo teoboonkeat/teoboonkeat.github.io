@@ -310,3 +310,11 @@ If you are familiar with RecyclerViews, you would know that this function will b
 2. The function is setting the text or content of the view.
 
 For the first thing, we can use something called an ArgumentCaptor to "catch" the holder variable that was passed in, then performing simple assertions on the value. To use this we will need to add the Mockito library.
+
+Add the following to your module's gradle file.
+
+{% highlight gradle %}
+{% raw %}
+testImplementation "org.mockito:mockito-core:2.8.9"
+{% endraw %}
+{% endhighlight %}
