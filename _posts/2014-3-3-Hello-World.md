@@ -92,9 +92,15 @@ We will need to test the functions inside MyAdapter class. These are the changes
  
 	View type returned at the 3rd, 7th, 11th and so forth will need to be of image view type instead of text view.
 
- - onCreate(..., ....)
+ - onCreateViewHolder(ViewGroup parent, int viewType)
  
  	We need to create the correct type of holder, either a TextView of ImageView.
+
+ - onBindViewHolder(RecyclerView.ViewHolder holder, int position)
+ 
+ 	Different binding methods for different view types.
+    
+    ![Screenshot_1520314417.png]({{site.baseurl}}/_posts/Screenshot_1520314417.png)
 
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
