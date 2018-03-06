@@ -141,7 +141,11 @@ We will need to test the functions inside MyAdapter class. These are the changes
  
 	Different binding methods for different view types.
     
+## Create Unit Test for MyAdapter
 
+In the navigation pane, locate the folder <project_name>(test). Unit tests are located in this folder. Right-click this and create a new class named MyAdapterTest.
+
+![ScreenShot2018-03-06_151053.png]({{site.baseurl}}/images/ScreenShot2018-03-06_151053.png)
 
 
 The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
