@@ -147,5 +147,108 @@ In the navigation pane, locate the folder <project_name>(test). Unit tests are l
 
 ![ScreenShot2018-03-06_151053.png]({{site.baseurl}}/images/ScreenShot2018-03-06_151053.png)
 
+Create the following functions in MyAdapterTest class.
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+{% highlight java %}
+{% raw %}
+public class MyAdapterTest
+{
+    @Before
+    public void setup()
+    {
+        
+    }
+
+    @Test
+    public void test_getItemViewType()
+    {
+        
+    }
+}
+{% endraw %}
+{% endhighlight %}
+
+When you run the test suite, the function setup() annotated with @Before will be called before every function annotated with @Test.
+
+Therefore we will perform setup functions in the setup() function.
+
+We want to test that getItemViewType returns a special inserted text view every 3 items. Let's create static constants in MyAdapter to identify these two views.
+
+MyAdapter.java
+
+{% highlight java %}
+{% raw %}
+public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
+{
+    public final static int NORMAL_VIEW = 1;
+    public final static int INSERTED_VIEW = 2;
+
+    /* code removed here for simplicity */
+}
+{% endraw %}
+{% endhighlight %}
+
+Create an instance of MyAdapter, populate with some test data.
+
+{% highlight java %}
+{% raw %}
+public class MyAdapterTest
+{
+	MyAdapter adapterUnderTest;
+    List<String> testData;
+  
+    @Before
+    public void setup()
+    {
+        testData = new ArrayList<>();
+        for (int i = 0; i < 20; i++)
+        {
+            testData.add("Item " + Integer.toString(i));
+        }
+        
+        adapterUnderTest = new MyAdapter(testData);
+    }
+
+    @Test
+    public void test_getItemViewType()
+    {
+        
+    }
+}
+{% endraw %}
+{% endhighlight %}
+
+Create the test cases in test_getItemViewType() function.
+For positions 0 to 2, it should return MyAdapter.NORMAL_VIEW. 
+For position 3, it should return MyAdapter.INSERTED_VIEW.
+
+{% highlight java %}
+{% raw %}
+public class MyAdapterTest
+{
+	MyAdapter adapterUnderTest;
+    List<String> testData;
+  
+    @Before
+    public void setup()
+    {
+        testData = new ArrayList<>();
+        for (int i = 0; i < 20; i++)
+        {
+            testData.add("Item " + Integer.toString(i));
+        }
+        
+        adapterUnderTest = new MyAdapter(testData);
+    }
+
+    @Test
+    public void test_getItemViewType()
+    {
+        Assert.assertEquals(MyAdapter.NORMAL_VIEW, adapterUnderTest.getItemViewType(0));
+        Assert.assertEquals(MyAdapter.NORMAL_VIEW, adapterUnderTest.getItemViewType(1));
+        Assert.assertEquals(MyAdapter.NORMAL_VIEW, adapterUnderTest.getItemViewType(2));
+        Assert.assertEquals(MyAdapter.INSERTED_VIEW, adapterUnderTest.getItemViewType(3));
+    }
+}
+{% endraw %}
+{% endhighlight %}
