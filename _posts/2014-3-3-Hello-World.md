@@ -321,3 +321,13 @@ testImplementation "org.mockito:mockito-core:2.13.0"
 {% endraw %}
 {% endhighlight %}
 
+Annotate MyAdapterTest class with Mockito.
+
+{% highlight java %}
+{% raw %}
+@RunWith(MockitoJUnitRunner.class)
+public class MyAdapterTest
+{
+
+{% endraw %}
+{% endhighlight %}
