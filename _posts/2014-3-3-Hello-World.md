@@ -100,7 +100,7 @@ We will need to test the functions inside MyAdapter class. These are the changes
  
  	Different binding methods for different view types.
     
-    ![Screenshot_1520314417.png]({{site.baseurl}}/_posts/Screenshot_1520314417.png)
+![Screenshot_1520314417.png]({{site.baseurl}}/_posts/Screenshot_1520314417.png)
 
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
