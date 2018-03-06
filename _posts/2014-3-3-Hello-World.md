@@ -183,7 +183,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public final static int NORMAL_VIEW = 1;
     public final static int INSERTED_VIEW = 2;
 
-	....
+    /* code removed here for simplicity */
 }
 {% endraw %}
 {% endhighlight %}
