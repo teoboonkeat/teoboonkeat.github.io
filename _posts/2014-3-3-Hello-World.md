@@ -308,3 +308,5 @@ If you are familiar with RecyclerViews, you would know that this function will b
 
 1. The correct type of holder is being passed into this function.
 2. The function is setting the text or content of the view.
+
+For the first thing, we can use something called an ArgumentCaptor to "catch" the holder variable that was passed in, then performing simple assertions on the value. To use this we will need to add the Mockito library.
