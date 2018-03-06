@@ -315,6 +315,9 @@ Add the following to your module's gradle file.
 
 {% highlight gradle %}
 {% raw %}
+
 testImplementation "org.mockito:mockito-core:2.8.9"
+
 {% endraw %}
 {% endhighlight %}
+
