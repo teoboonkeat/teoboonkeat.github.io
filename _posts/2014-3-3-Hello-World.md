@@ -25,6 +25,8 @@ Project consists of just a MainActivity.java file to set up our recycler view wi
 
 MainActivity.java
 
+{% highlight java %}
+{% raw %}
     public class MainActivity extends AppCompatActivity
     {
         private RecyclerView rv;
@@ -48,6 +50,9 @@ MainActivity.java
             rv.setAdapter(myAdapter);
         }
     }
+{% endraw %}
+{% endhighlight %}
+
 
 MyAdapter.java
 
@@ -66,6 +71,9 @@ MyAdapter.java
 	
 
 So far, the code shows a straight forward simple recycler list. Build the app and we should see this.
+
+![Screenshot_1520314417.png]({{site.baseurl}}/_posts/Screenshot_1520314417.png)
+
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
 ## The Change
