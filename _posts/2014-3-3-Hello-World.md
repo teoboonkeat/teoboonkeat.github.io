@@ -72,7 +72,7 @@ MyAdapter.java
 
 So far, the code shows a straight forward simple recycler list. Build the app and we should see this.
 
-![Screenshot_1520314417.png]({{site.baseurl}}/_posts/Screenshot_1520314417.png)
+![Screenshot_1520314417.png]({{site.baseurl}}/images/Screenshot_1520314417.png)
 
 
 ## The Change
@@ -100,7 +100,7 @@ We will need to test the functions inside MyAdapter class. These are the changes
  
  	Different binding methods for different view types.
     
-![Screenshot_1520314417.png]({{site.baseurl}}/_posts/Screenshot_1520314417.png)
+
 
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
