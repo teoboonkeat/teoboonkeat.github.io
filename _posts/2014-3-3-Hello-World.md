@@ -58,14 +58,55 @@ MyAdapter.java
 
 {% highlight java %}
 {% raw %}
-  public class MyAdapter extends RecyclerView.Adapter
-  {
-    @Override
-    protected void onCreate(...)
+public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
+{
+    List<String> data;
+
+    public MyAdapter(List<String> dataSet)
     {
-      //test comments endraw
+        this.data = dataSet;
     }
-  }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+    {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.normal_list_item, parent, false);
+
+        NormalContentViewHolder viewHolder = new NormalContentViewHolder(view);
+
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position)
+    {
+        ((NormalContentViewHolder)holder).textView.setText(data.get(position));
+    }
+
+    @Override
+    public int getItemCount()
+    {
+        return data.size();
+    }
+
+    @Override
+    public int getItemViewType(int position)
+    {
+        return super.getItemViewType(position);
+    }
+
+    public static class NormalContentViewHolder extends RecyclerView.ViewHolder
+    {
+        public TextView textView;
+
+        public NormalContentViewHolder(View itemView)
+        {
+            super(itemView);
+            textView = itemView.findViewById(R.id.textView);
+        }
+    }
+}
 {% endraw %}
 {% endhighlight %}
 	
